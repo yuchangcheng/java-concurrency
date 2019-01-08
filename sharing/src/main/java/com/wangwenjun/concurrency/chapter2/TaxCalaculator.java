@@ -9,6 +9,7 @@ package com.wangwenjun.concurrency.chapter2;
 public class TaxCalaculator {
     private final double salary;
     private final double bonus;
+
     private CalaculatorStrategy calaculatorStrategy;
 
     public TaxCalaculator(double salary, double bonus) {
