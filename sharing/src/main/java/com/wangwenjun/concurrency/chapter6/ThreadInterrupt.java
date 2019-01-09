@@ -11,13 +11,21 @@ public class ThreadInterrupt {
         Thread t = new Thread(){
             @Override
             public void run() {
-                super.run();
+                while(true){
+//                    System.out.println("子线程>>"+this.isInterrupted());
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        System.out.println("收到打断信号！");
+                        e.printStackTrace();
+                    }
+                }
             }
         };
         t.start();
         Thread.sleep(100);
-        System.out.println(t.isInterrupted());
+        System.out.println("主线程开始1-->"+t.isInterrupted());//"主线程开始1-->"+
         t.interrupt();
-        System.out.println(t.isInterrupted());
+        System.out.println("主线程结束2-->"+t.isInterrupted());//"主线程结束2-->"+
     }
 }
