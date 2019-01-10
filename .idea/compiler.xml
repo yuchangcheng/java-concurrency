@@ -11,8 +11,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="example" target="1.5" />
-      <module name="java-concurrency" target="1.5" />
+      <module name="example" target="1.8" />
+      <module name="java-concurrency" target="1.8" />
       <module name="sharing" target="1.8" />
     </bytecodeTargetLevel>
   </component>
